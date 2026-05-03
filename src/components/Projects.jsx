@@ -9,15 +9,24 @@ function Projects() {
       live: "https://movie-review-frontend-swart.vercel.app/",
       github: "https://github.com/saisree2905/movie-review-platform",
     },
+    {
+  title: "Smart Road System (NeurofleetX)",
+  description: "A full-stack traffic management and bus booking system providing smart alerts and real-time coordination.",
+  tech: ["React", "Tailwind CSS", "Spring Boot", "MySQL", "Hibernate"],
+  github: "https://github.com/saisree2905/Smart_Road_System",
 
-    {
-      title: "NeuroFleetX",
+},
+  
+
+       {
+      title: "Currency Converter",
       description:
-        "A Java Spring Boot based fleet management system with user management, data tracking, and backend service integration.",
-      tech: ["Java", "Spring Boot", "REST APIs"],
-      github: "https://github.com/saisree2905/NeuroFleetx-Final",
+        "A console based dynamic and real-time currency converter that converts, global currency  .",
+      tech: ["Java", "OOPs", "Data Structures", "REST API"],
+      github: "https://github.com/saisree2905/Currency-converter",
     },
-    {
+
+  {
       title: "Airbnb Clone (MERN Stack)",
       description:
         "A property rental platform with authentication, listings, bookings, and responsive UI built using the MERN stack.",
