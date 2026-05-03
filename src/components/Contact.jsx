@@ -1,0 +1,114 @@
+import { useState } from "react";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+
+function Contact() {
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [status, setStatus] = useState("");
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("Sending...");
+
+    try {
+      const res = await fetch(
+        "https://portfolio-backend-mstt.onrender.com/api/contact",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(form),
+        }
+      );
+
+      if (res.ok) {
+        setStatus("Message sent successfully ✅");
+        setForm({ name: "", email: "", message: "" });
+      } else {
+        setStatus("Something went wrong ❌");
+      }
+    } catch (error) {
+      setStatus("Server not reachable ❌");
+    }
+  };
+
+  return (
+    <section id="contact" className="py-28 px-6 flex justify-center bg-slate-950">
+      <div className="max-w-4xl w-full bg-slate-900 border border-slate-800 rounded-2xl p-10 md:p-14">
+
+        <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-6">
+          Get In{" "}
+          <span className="bg-gradient-to-r from-indigo-400 to-blue-400 bg-clip-text text-transparent">
+            Touch
+          </span>
+        </h2>
+
+        <p className="text-gray-400 text-center mb-10">
+          Interested in collaborating or discussing a project? Send a message.
+        </p>
+
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col gap-5 max-w-xl mx-auto"
+        >
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            value={form.name}
+            onChange={handleChange}
+            required
+            className="p-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-gray-400 focus:outline-none focus:border-indigo-500 transition"
+          />
+
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            value={form.email}
+            onChange={handleChange}
+            required
+            className="p-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-gray-400 focus:outline-none focus:border-indigo-500 transition"
+          />
+
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            rows="4"
+            value={form.message}
+            onChange={handleChange}
+            required
+            className="p-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-gray-400 focus:outline-none focus:border-indigo-500 transition"
+          />
+
+          <button
+            type="submit"
+            className="mt-2 py-3 rounded-lg bg-gradient-to-r from-indigo-500 to-blue-500 font-semibold hover:scale-105 transition transform"
+          >
+            Send Message
+          </button>
+
+          {status && <p className="text-gray-400 mt-3 text-center">{status}</p>}
+        </form>
+
+        {/* Social Icons */}
+        <div className="flex justify-center gap-8 text-2xl text-gray-400 mt-10">
+          <a href="https://github.com/saisree2905" target="_blank" className="hover:text-white transition">
+            <FaGithub />
+          </a>
+          <a href="https://www.linkedin.com/in/saisree-mallesh-693334356" target="_blank" className="hover:text-blue-400 transition">
+            <FaLinkedin />
+          </a>
+          <a href="https://www.instagram.com/c.s.gouthamreddy_18?igsh=MTFrZ3ZkNXk0aWFoYw==" target="_blank" className="hover:text-pink-400 transition">
+            <FaInstagram />
+          </a>
+        </div>
+
+      </div>
+    </section>
+  );
+}
+
+export default Contact;
