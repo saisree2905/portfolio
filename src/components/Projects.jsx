@@ -9,6 +9,16 @@ function Projects() {
       live: "https://movie-review-frontend-swart.vercel.app/",
       github: "https://github.com/saisree2905/movie-review-platform",
     },
+
+        {
+      title: "Edu-Vault",
+      description:
+        "A full stack platform with authentication, Student Pdfs, Quizzes, Exams, centralized management for students and lecturers.",
+      tech: ["Html", "Css", "Java Script", "MySQL"],
+      live: "https://edu-vault-zeta.vercel.app/",
+      github: "https://github.com/saisree2905/Edu-vault",
+    },
+
     {
   title: "Smart Road System (NeurofleetX)",
   description: "A full-stack traffic management and bus booking system providing smart alerts and real-time coordination.",
@@ -32,13 +42,6 @@ function Projects() {
         "A property rental platform with authentication, listings, bookings, and responsive UI built using the MERN stack.",
       tech: ["MongoDB", "Express", "React", "Node.js"],
       github: "https://github.com/saisree2905/Airbnb",
-    },
-    {
-      title: "Edu-Vault",
-      description:
-        "A full stack platform with authentication, Student Pdfs, Quizzes, Exams, centralized management for students and lecturers.",
-      tech: ["Html", "Css", "Java Script", "MySQL"],
-      github: "https://github.com/saisree2905/Edu-vault",
     },
   ];
 
