@@ -31,14 +31,14 @@ function Projects() {
       description:
         "A property rental platform with authentication, listings, bookings, and responsive UI built using the MERN stack.",
       tech: ["MongoDB", "Express", "React", "Node.js"],
-      github: "https://github.com/saisree2905/CodeAlpha_Project_ArtificialIntelligenceChatbot",
+      github: "https://github.com/saisree2905/Airbnb",
     },
     {
-      title: "Food Delivery Database System",
+      title: "Edu-Vault",
       description:
-        "A database-driven system designed to manage restaurants, customers, orders, and delivery tracking using SQL.",
-      tech: ["MySQL", "Database Design", "SQL"],
-      github: "https://github.com/saisree2905/CodeAlpha_Project_StudentGradeTracker",
+        "A full stack platform with authentication, Student Pdfs, Quizzes, Exams, centralized management for students and lecturers.",
+      tech: ["Html", "Css", "Java Script", "MySQL"],
+      github: "https://github.com/saisree2905/Edu-vault",
     },
   ];
 
