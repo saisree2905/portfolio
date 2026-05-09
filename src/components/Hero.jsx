@@ -29,7 +29,7 @@ function Hero() {
               View Projects
             </a>
             <a
-              href="/resume.pdf"
+              href="/Sai_resume.pdf"
               className="px-6 py-3 rounded-lg border border-indigo-400 text-indigo-300 hover:bg-indigo-500/10 transition"
             >
               Resume
